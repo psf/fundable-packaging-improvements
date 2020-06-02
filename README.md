@@ -55,7 +55,7 @@ management, and community outreach.
 
 We need funding to ensure core packaging tools work well with each other;
 currently they aren't seamlessly interoperable. See [the integration-test
-project](https://github.com/pypa/integration-test\) This will help us get
+project](https://github.com/pypa/integration-test) This will help us get
 faster at testing and rolling out bugfixes and features for **all** [Python
 packaging and distribution tools](https://packaging.python.org/key_projects):
 well-known projects like pip, virtualenv, and wheel, but also all the
@@ -93,7 +93,7 @@ research, and publicity and coordination work within Python's community.
 
 There is a part of the Python standard library called `distutils`, and some
 users directly use it.  [We want users to instead switch to the supported
-toolchain](https://github.com/pypa/packaging-problems/issues/127\), which uses
+toolchain](https://github.com/pypa/packaging-problems/issues/127), which uses
 `setuptools`, and move all the functionality from `distutils` into
 `setuptools`. This requires backend development work, technical writing,
 project management, and publicity work within Python's community.
@@ -105,7 +105,7 @@ Developers of Python projects want to be able to use "editable installations"
 applications. Right now, the support for that kind of usage is rough and not
 standardized across different tools.  [Packaging tools maintainers have rough
 plans for how to standardize the feature and support for
-it](https://discuss.python.org/t/specification-of-editable-installation/1564\)
+it](https://discuss.python.org/t/specification-of-editable-installation/1564)
 using distutils and setuptools. We would like funding for developing a proof of
 concept and coordinating subsequent standards changes, tool improvements, and
 documentation. This requires backend development work, technical writing, and
@@ -114,7 +114,7 @@ coordination and publicity work within Python's community.
 ### Add support for pyproject.toml as a way to configure setuptools
 
 `setuptools` [does not yet
-allow](https://github.com/pypa/setuptools/issues/1688\) project creators to use
+allow](https://github.com/pypa/setuptools/issues/1688) project creators to use
 the new `pyproject.toml` standard configuration file to configure `setuptools`
 behavior. This distracts and confuses package creators, and prevents platforms
 and tools from depending on the presence of standard `pyproject.toml` metadata
@@ -126,7 +126,7 @@ coordination and publicity work within Python's community.
 
 If we [audit and update PyPI metadata for existing projects based on
 already-uploaded
-artifacts](https://github.com/pypa/warehouse/issues/474\#issuecomment-370986838\),
+artifacts](https://github.com/pypa/warehouse/issues/474#issuecomment-370986838),
 we can publish information about what packages depend on each other and on
 certain environments, and ensure a high-quality API for many tools to reuse and
 build upon. The current PyPI upload API relies on the upload client extracting
@@ -148,12 +148,12 @@ general.
 ### Improve specificity of license classifiers
 
 Our packaging ecosystem relies on [a particular structured data format
-(classifiers)](https://pypi.org/classifiers/\) to indicate a package's legal
+(classifiers)](https://pypi.org/classifiers/) to indicate a package's legal
 license. However, our current system [allows for ambiguity that makes some
 downstream data display incoherent or very difficult, and doesn't allow for some
 license specificity that downstream consumers
-need](https://github.com/pypa/warehouse/issues/2996\)
-([Libraries.io](https://libraries.io/\) and similar projects). Fixing this is a
+need](https://github.com/pypa/warehouse/issues/2996)
+([Libraries.io](https://libraries.io/) and similar projects). Fixing this is a
 fairly small project, involving Python development, public communications,
 project management, and potentially a few hours of legal counsel for review.
 
@@ -161,14 +161,14 @@ project management, and potentially a few hours of legal counsel for review.
 
 `pip` currently uses `requirements.txt` to specify dependencies; it can specify
 __versions__ of packages but not __hashes__. The [newer pipfile
-format](https://github.com/pypa/pipfile\) can include hashes, which some users
+format](https://github.com/pypa/pipfile) can include hashes, which some users
 prefer. But `pip` [doesn't yet
-support](https://github.com/pypa/pip/issues/4732\) `pipfile`, so many users are
+support](https://github.com/pypa/pip/issues/4732) `pipfile`, so many users are
 blocked from using hashes to better secure their Python runtimes. We have [made
 some progress toward standardizing an interoperable lockfile
-format](https://github.com/uranusjr/lock-file\), but we need to finish [that
+format](https://github.com/uranusjr/lock-file), but we need to finish [that
 design standardization and consensus-gathering
-work](https://discuss.python.org/t/structured-exchangeable-lock-file-format-requirements-txt-2-0/876/\)
+work](https://discuss.python.org/t/structured-exchangeable-lock-file-format-requirements-txt-2-0/876/)
 and implement it in `pip`, `pipenv`, and related tools. We'd need Python
 engineering work and project management to develop and deploy this.
 
@@ -178,32 +178,36 @@ Right now, there are ways for package maintainers to test and share draft
 versions of their upcoming releases, but they cause friction and confusion. So
 we want to add [staged releases -- a temporary state that a release can be in,
 where PyPI __has__ it and can evaluate it, but hasn't __published__ it
-yet](https://github.com/pypa/warehouse/issues/726\).
+yet](https://github.com/pypa/warehouse/issues/726).
 
 This will:
 
 -   let project owners/maintainers
-    preview/[test](https://github.com/pypa/warehouse/issues/720\)
+    preview/[test](https://github.com/pypa/warehouse/issues/720)
     how their package metadata displays on the website, and review where
     their fresh releases are out of compliance with site and
     interoperability requirements (preventing the problem of
-    [maintainers wanting to re-upload removed files](https://github.com/pypa/packaging-problems/issues/74\))
+    [maintainers wanting to re-upload removed files](https://github.com/pypa/packaging-problems/issues/74))
 -   help cross-platform package maintainers
-    [coordinate dozens of wheels built on multiple machines](https://github.com/pypa/warehouse/issues/4056\) for simultaneous release
--   [Provide an interoperability check for toolchain developers, and a testing site for people learning packaging](https://github.com/pypa/warehouse/issues/2286\)
--   [Simplify packagers' upload configuration files](https://github.com/takluyver/flit/issues/125\)
+    [coordinate dozens of wheels built on multiple machines](https://github.com/pypa/warehouse/issues/4056) for simultaneous release
+-   [Provide an interoperability check for toolchain developers, and a testing site for people learning packaging](https://github.com/pypa/warehouse/issues/2286)
+-   [Simplify packagers' upload configuration files](https://github.com/takluyver/flit/issues/125)
 -   reduce complexity that currently forces maintainers to use
-    [confusing "dev" or prerelease version numbers](https://github.com/pypa/warehouse/issues/5707\)
--   [Improve security of package uploads, by allowing maintainers to scope upload API tokens to the newly staged package](https://github.com/pypa/warehouse/issues/6378\)
--   [Prevent package name conflicts](https://github.com/pypa/packaging-problems/issues/114\)
--   [Streamline infrastructure maintenance and confusing documentation by letting us take down the separate test.pypi.org staging site](https://github.com/pypa/warehouse/issues/918\)
--   Provide pre-release warnings to maintainers of packages that
-    [manylinux wheels that fail auditwheel checks](https://github.com/pypa/packaging-problems/issues/264\|fail metadata checks\]\] (such as rejecting or warning for [packages without Python requirements metadata](https://github.com/pypa/warehouse/issues/3889\), or \[\[https://github.com/pypa/warehouse/issues/5420\)) -- as we increase the packaging
-    ecology's strictness regarding metadata standards compliance, during
-    the intermediate period where we're warning maintainers/owners about
+    [confusing "dev" or prerelease version numbers](https://github.com/pypa/warehouse/issues/5707)
+-   [Improve security of package uploads, by allowing maintainers to scope upload API tokens to the newly staged package](https://github.com/pypa/warehouse/issues/6378)
+-   [Prevent package name conflicts](https://github.com/pypa/packaging-problems/issues/114)
+-   [Streamline infrastructure maintenance and confusing documentation by letting us take down the separate test.pypi.org staging site](https://github.com/pypa/warehouse/issues/918)
+-   Provide pre-release warnings to maintainers of packages that [fail metadata
+    checks](https://github.com/pypa/packaging-problems/issues/264) (such as
+    rejecting or warning for [packages without Python requirements
+    metadata](https://github.com/pypa/warehouse/issues/3889), or [manylinux
+    wheels that fail auditwheel
+    checks](https://github.com/pypa/warehouse/issues/5420) -- as we increase
+    the packaging ecology's strictness regarding metadata standards compliance,
+    during the intermediate period where we're warning maintainers/owners about
     failing strictness checks but not yet blocking releases on those new
-    stricter checks, the package preview feature will help us provide
-    soft warnings.
+    stricter checks, the package preview feature will help us provide soft
+    warnings.
 
 We'll need database support for understanding the release state ("is
 this published or not"), user experience and developer support, and
@@ -213,7 +217,7 @@ testing, security, infrastructure, and project management support.
 
 It's difficult to roll out new features gradually to PyPI's test site or
 to selected test users. A
-[feature flag system](https://github.com/pypa/warehouse/issues/5869\) would help us do targeted outreach to particular groups of
+[feature flag system](https://github.com/pypa/warehouse/issues/5869) would help us do targeted outreach to particular groups of
 users, deploy more confidently, and roll back changes when needed. We'd
 need user experience, front and backend engineer, data analytics, and
 project management support to develop and deploy this.
@@ -221,16 +225,16 @@ project management support to develop and deploy this.
 ### User support ticket system
 
 Python packagers who need help currently create
-[Sourceforge](https://sourceforge.net/p/pypi/support-requests/\)
-and [GitHub](https://github.com/pypa/warehouse/issues/\) tickets,
+[Sourceforge](https://sourceforge.net/p/pypi/support-requests/)
+and [GitHub](https://github.com/pypa/warehouse/issues/) tickets,
 email mailing lists, tweet at maintainers, and so on. A
-[unified user support ticket system](https://github.com/pypa/warehouse/issues/3231\#issuecomment-405561741\), integrated into Warehouse, would:
+[unified user support ticket system](https://github.com/pypa/warehouse/issues/3231\#issuecomment-405561741), integrated into Warehouse, would:
 
 -   help managers, entrepreneurs, and academics
-    [reserve specific package names](https://github.com/pypa/warehouse/issues/2082\)
--   [support username changes](https://github.com/pypa/warehouse/issues/1190\)
--   give users [a reporting system to quickly flag malware and spam](https://github.com/pypa/warehouse/issues/2982\)
--   provide a [transfer system for abandoned/unmaintained projects](https://github.com/pypa/warehouse/issues/1506\)
+    [reserve specific package names](https://github.com/pypa/warehouse/issues/2082)
+-   [support username changes](https://github.com/pypa/warehouse/issues/1190)
+-   give users [a reporting system to quickly flag malware and spam](https://github.com/pypa/warehouse/issues/2982)
+-   provide a [transfer system for abandoned/unmaintained projects](https://github.com/pypa/warehouse/issues/1506)
 -   reduce work for PyPI's core developers who currently have to sift
     through user support issues to find bug reports and feature requests
 -   enable PyPI admins to better delegate support and moderation work to
@@ -252,12 +256,12 @@ as deprecated or a project as unsupported. This means we need a generic
 system to add, edit, and remove administrative attributes ("flags" or
 "statuses") to individual projects and releases. We need support to do
 the architectural design to implement this. (See
-[notes from this meeting](PackagingWG/2019-03-22-Warehouse\).)
+[notes from this meeting](PackagingWG/2019-03-22-Warehouse).)
 
 ### Security notifications for vulnerable packages
 
 To keep PyPI's users secure, we want to give them
-[an opt-in communication channel to hear about security vulnerabilities for the packages they use](https://github.com/pypa/warehouse/issues/798\). Implementing this would also give us
+[an opt-in communication channel to hear about security vulnerabilities for the packages they use](https://github.com/pypa/warehouse/issues/798). Implementing this would also give us
 architectural support to __warn or prevent__ `pip` users who try to
 install a PyPI package that's been found to be broken or malware. We
 need funding for user experience work, development, testing,
@@ -272,17 +276,17 @@ Some TODOs that were on this page have now received funding!
 
 ### Finish dependency resolver for pip
 
-__[This is now funded](https://pyfound.blogspot.com/2019/11/seeking-developers-for-paid-contract.html\) and
-[we seek developers to work on this project (apply by 22 November 2019](https://github.com/python/request-for/blob/master/2020-pip/RFP.md\).)__
+__[This is now funded](https://pyfound.blogspot.com/2019/11/seeking-developers-for-paid-contract.html) and
+[we seek developers to work on this project (apply by 22 November 2019](https://github.com/python/request-for/blob/master/2020-pip/RFP.md).)__
 
 We're partway through a next-generation rewrite of the dependency
 resolver within pip, Python's package download and installation tool.
 The project ran into massive technical debt, but the refactoring is
 nearly finished and prototype functionality is in alpha now.
-([In-depth explanation by Sebastian Awwad of the problem & our approach](https://docs.google.com/document/d/1x\_VrNtXCup75qA3glDd2fQOB2TakldwjKZ6pXaAjAfg/edit\),
-[lead developer Pradyun Gedam's initial plan](https://gist.github.com/pradyunsg/5cf4a35b81f08b6432f280aba6f511eb\),
-[2017 status updates](https://pradyunsg.me/gsoc-2017/\), and [GitHub issue \#988 tracking progress](https://pradyunsg.me/blog/2019/06/23/pip-update/\|June 2019 status update\]\], \[\[https://github.com/pypa/pip/issues/988\) and
-[issue \#6536 for planning rollout](https://github.com/pypa/pip/issues/6536\).)
+([In-depth explanation by Sebastian Awwad of the problem & our approach](https://docs.google.com/document/d/1x\_VrNtXCup75qA3glDd2fQOB2TakldwjKZ6pXaAjAfg/edit),
+[lead developer Pradyun Gedam's initial plan](https://gist.github.com/pradyunsg/5cf4a35b81f08b6432f280aba6f511eb),
+[2017 status updates](https://pradyunsg.me/gsoc-2017/), and [GitHub issue \#988 tracking progress](https://pradyunsg.me/blog/2019/06/23/pip-update/\|June 2019 status update\]\], \[\[https://github.com/pypa/pip/issues/988) and
+[issue \#6536 for planning rollout](https://github.com/pypa/pip/issues/6536).)
 
 Funding would support user experience, communications/publicity, and
 testing work (including developing robust testing/CI infrastructure) as
@@ -291,54 +295,54 @@ well as core feature development and review.
 We need to finish the resolver because so many other improvements are
 blocked on it:
 
-* [adding an "upgrade-all" command to pip](https://github.com/pypa/pip/issues/4551\)
-* [warning when trying to download or build wheels from incompatible set of packages/requirements](https://github.com/pypa/pip/issues/5497\)
-* [adding a no-implicit-upgrades strategy](https://github.com/pypa/pip/issues/4745\)
-* [making PyPI and pip enforce metadata compliance more strictly](https://github.com/pypa/packaging-problems/issues/264\)
-* [warning the user when uninstalling a package that other packages depend on](https://github.com/pypa/pip/issues/4681\)
-* [properly respecting constraints](https://github.com/pypa/pip/issues/6495\)
-* [recording requested and installed extras](https://github.com/pypa/packaging-problems/issues/215\)
-* [option to show what versions of packages are currently available](https://github.com/pypa/pip/issues/53\)
-* [listing packages' dependencies and dependents on PyPI](https://github.com/pypa/packaging-problems/issues/54\)
-* [minimizing duplication of work between pip and pipenv](https://mail.python.org/archives/list/distutils-sig\@python.org/thread/2QECNWSHNEW7UBB24M2K5BISYJY7GMZF/\#2QECNWSHNEW7UBB24M2K5BISYJY7GMZF\)
-* [better pipenv functionality](https://github.com/pypa/pipenv/issues?q=is%3Aopen+is%3Aissue+label%3A%22Category%3A+Dependency+Resolution%22\)
-* [package namespace support](https://discuss.python.org/t/namespace-support-in-pypi/1609/35\)
-* [moving more code out of Python's standard library so we can release improvements faster](https://discuss.python.org/t/if-python-started-moving-more-code-out-of-the-stdlib-and-into-pypi-packages-what-technical-mechanisms-could-packaging-use-to-ease-that-transition/1738/24\)
+* [adding an "upgrade-all" command to pip](https://github.com/pypa/pip/issues/4551)
+* [warning when trying to download or build wheels from incompatible set of packages/requirements](https://github.com/pypa/pip/issues/5497)
+* [adding a no-implicit-upgrades strategy](https://github.com/pypa/pip/issues/4745)
+* [making PyPI and pip enforce metadata compliance more strictly](https://github.com/pypa/packaging-problems/issues/264)
+* [warning the user when uninstalling a package that other packages depend on](https://github.com/pypa/pip/issues/4681)
+* [properly respecting constraints](https://github.com/pypa/pip/issues/6495)
+* [recording requested and installed extras](https://github.com/pypa/packaging-problems/issues/215)
+* [option to show what versions of packages are currently available](https://github.com/pypa/pip/issues/53)
+* [listing packages' dependencies and dependents on PyPI](https://github.com/pypa/packaging-problems/issues/54)
+* [minimizing duplication of work between pip and pipenv](https://mail.python.org/archives/list/distutils-sig\@python.org/thread/2QECNWSHNEW7UBB24M2K5BISYJY7GMZF/\#2QECNWSHNEW7UBB24M2K5BISYJY7GMZF)
+* [better pipenv functionality](https://github.com/pypa/pipenv/issues?q=is%3Aopen+is%3Aissue+label%3A%22Category%3A+Dependency+Resolution%22)
+* [package namespace support](https://discuss.python.org/t/namespace-support-in-pypi/1609/35)
+* [moving more code out of Python's standard library so we can release improvements faster](https://discuss.python.org/t/if-python-started-moving-more-code-out-of-the-stdlib-and-into-pypi-packages-what-technical-mechanisms-could-packaging-use-to-ease-that-transition/1738/24)
 
 and it would fix so many dependency issues for our users:
 
-* [Django installation conflict](https://github.com/pypa/pip/issues/4907\)
-* [cherrypy/six/cheroot installation conflict](https://github.com/pradyunsg/zazo/issues/2\)
-* [Spyder downgrade requirement](https://github.com/pypa/pip/issues/5043\)
-* [boto3/bravado dependency failure](https://github.com/pradyunsg/zazo/issues/4\)
-* [extras installation failure](https://github.com/pypa/pip/issues/5313\|Ansible/PyOpenSSL/cryptography failure\]\] \[\[https://github.com/pypa/pip/issues/4957\)
-* [extras upgrade failure](https://github.com/pypa/pip/issues/4391\)
-* [breaking installed packages](https://github.com/pypa/pip/issues/6494\)
-* [hatch, another packaging tool](https://github.com/pradyunsg/zazo/issues/14\|elasticsearch/requests failure\]\] \[\[https://github.com/ofek/hatch/issues/47\)
+* [Django installation conflict](https://github.com/pypa/pip/issues/4907)
+* [cherrypy/six/cheroot installation conflict](https://github.com/pradyunsg/zazo/issues/2)
+* [Spyder downgrade requirement](https://github.com/pypa/pip/issues/5043)
+* [boto3/bravado dependency failure](https://github.com/pradyunsg/zazo/issues/4)
+* [extras installation failure](https://github.com/pypa/pip/issues/5313\|Ansible/PyOpenSSL/cryptography failure\]\] \[\[https://github.com/pypa/pip/issues/4957)
+* [extras upgrade failure](https://github.com/pypa/pip/issues/4391)
+* [breaking installed packages](https://github.com/pypa/pip/issues/6494)
+* [hatch, another packaging tool](https://github.com/pradyunsg/zazo/issues/14\|elasticsearch/requests failure\]\] \[\[https://github.com/ofek/hatch/issues/47)
 
 And in our larger ecology, this causes installation problems for:
 
-* [the Servo browser engine](https://github.com/conda/conda/issues/8657\|conda's compatibility with pip\]\] \[\[https://github.com/servo/servo/issues/10611\)
-* [numpy and scipy](https://github.com/pypa/pip/issues/4582\)
-* [a Cap'n Proto implementation](https://github.com/juju/python-libjuju/issues/45\|Canonical's DevOps tool Juju\]\] \[\[https://github.com/antocuni/capnpy/issues/16\)
-* [the Mozilla website & icalendar](https://github.com/DataBiosphere/toil/issues/2230\|toil, awscli, and boto3\]\] \[\[https://github.com/mozilla/bedrock/issues/5967\)
-* [certbot, in the past and possibly the future](https://github.com/certbot/certbot/issues/5195\)
-* [TurboGears](https://github.com/TurboGears/tg2devtools/issues/13\)
-* [a JIRA API client library](https://github.com/pycontribs/jira/pull/744\)
-* [a WebSocket protocol test suite](https://github.com/crossbario/autobahn-testsuite/issues/55\)
-* [Robot Operating System tooling](https://github.com/gerkey/ros1\_external\_use/issues/7\)
+* [the Servo browser engine](https://github.com/conda/conda/issues/8657\|conda's compatibility with pip\]\] \[\[https://github.com/servo/servo/issues/10611)
+* [numpy and scipy](https://github.com/pypa/pip/issues/4582)
+* [a Cap'n Proto implementation](https://github.com/juju/python-libjuju/issues/45\|Canonical's DevOps tool Juju\]\] \[\[https://github.com/antocuni/capnpy/issues/16)
+* [the Mozilla website & icalendar](https://github.com/DataBiosphere/toil/issues/2230\|toil, awscli, and boto3\]\] \[\[https://github.com/mozilla/bedrock/issues/5967)
+* [certbot, in the past and possibly the future](https://github.com/certbot/certbot/issues/5195)
+* [TurboGears](https://github.com/TurboGears/tg2devtools/issues/13)
+* [a JIRA API client library](https://github.com/pycontribs/jira/pull/744)
+* [a WebSocket protocol test suite](https://github.com/crossbario/autobahn-testsuite/issues/55)
+* [Robot Operating System tooling](https://github.com/gerkey/ros1\_external\_use/issues/7)
 
 ### Improve pip user experience
 
 __This is now funded, thanks to
-[the Chan Zuckerberg Initiative](https://chanzuckerberg.com/eoss/proposals/improving-user-experience-and-debuggability-of-pip-for-all-python-users/\) and
-[Mozilla Open Source Support](https://www.mozilla.org/en-US/moss/\).__
+[the Chan Zuckerberg Initiative](https://chanzuckerberg.com/eoss/proposals/improving-user-experience-and-debuggability-of-pip-for-all-python-users/) and
+[Mozilla Open Source Support](https://www.mozilla.org/en-US/moss/).__
 
 `pip`'s user experience needs to improve by providing
-[better error messages](https://github.com/pypa/pip/milestone/25\)
+[better error messages](https://github.com/pypa/pip/milestone/25)
 and prompts, logs, output, and reporting, and becoming more consistent
 across features, to fit the user's mental model better, make hairy
 problems easier to untangle, and reduce unintended data loss. `pip`'s
-maintainers have [a list of TODOs](https://github.com/pypa/pip/milestone/10\) and need funding so that user experience researchers, UX
+maintainers have [a list of TODOs](https://github.com/pypa/pip/milestone/10) and need funding so that user experience researchers, UX
 designers, developers, and technical writers can spend dedicated time
 addressing them.
