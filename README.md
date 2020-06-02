@@ -1,6 +1,6 @@
 # Packaging improvements that could be funded
 
-This repository holds FUNDABLES.md: the list of tasks that the [Packaging Working Group](https://wiki.python.org/psf/PackagingWG) is seeking funding for. We use this list to prioritize our use of [donations](http://donate.pypi.org/) and to write proposals asking for grants and directed gifts.
+This repository holds [FUNDABLES.MD](./FUNDABLES.md): the list of tasks that the [Packaging Working Group](https://wiki.python.org/psf/PackagingWG) is seeking funding for. We use this list to prioritize our use of [donations](http://donate.pypi.org/) and to write proposals asking for grants and directed gifts.
 
 The Packaging WG uses three criteria to add tasks to this list:
 
