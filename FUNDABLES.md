@@ -228,7 +228,7 @@ Python packagers who need help currently create
 [Sourceforge](https://sourceforge.net/p/pypi/support-requests/)
 and [GitHub](https://github.com/pypa/warehouse/issues/) tickets,
 email mailing lists, tweet at maintainers, and so on. A
-[unified user support ticket system](https://github.com/pypa/warehouse/issues/3231\#issuecomment-405561741), integrated into Warehouse, would:
+[unified user support ticket system](https://github.com/pypa/warehouse/issues/3231#issuecomment-405561741), integrated into Warehouse, would:
 
 -   help managers, entrepreneurs, and academics
     [reserve specific package names](https://github.com/pypa/warehouse/issues/2082)
@@ -247,8 +247,7 @@ users, project management, and community outreach.
 
 ## Security improvements and prerequisites
 
-### System to label projects on PyPI with administrative
-statuses/attributes
+### System to label projects on PyPI with administrative statuses/attributes
 
 To scale up our anti-abuse moderation and help package maintainers with
 security response, we need to be able to, for instance, mark a release
@@ -283,10 +282,10 @@ We're partway through a next-generation rewrite of the dependency
 resolver within pip, Python's package download and installation tool.
 The project ran into massive technical debt, but the refactoring is
 nearly finished and prototype functionality is in alpha now.
-([In-depth explanation by Sebastian Awwad of the problem & our approach](https://docs.google.com/document/d/1x\_VrNtXCup75qA3glDd2fQOB2TakldwjKZ6pXaAjAfg/edit),
+([In-depth explanation by Sebastian Awwad of the problem & our approach](https://docs.google.com/document/d/1x_VrNtXCup75qA3glDd2fQOB2TakldwjKZ6pXaAjAfg/edit),
 [lead developer Pradyun Gedam's initial plan](https://gist.github.com/pradyunsg/5cf4a35b81f08b6432f280aba6f511eb),
-[2017 status updates](https://pradyunsg.me/gsoc-2017/), and [GitHub issue \#988 tracking progress](https://pradyunsg.me/blog/2019/06/23/pip-update/\|June 2019 status update\]\], \[\[https://github.com/pypa/pip/issues/988) and
-[issue \#6536 for planning rollout](https://github.com/pypa/pip/issues/6536).)
+[2017 status updates](https://pradyunsg.me/gsoc-2017/), and [GitHub issue #988 tracking progress](https://github.com/pypa/pip/issues/988) and [June 2019 status update](https://pradyunsg.me/blog/2019/06/23/pip-update/), and
+[issue #6536 for planning rollout](https://github.com/pypa/pip/issues/6536).)
 
 Funding would support user experience, communications/publicity, and
 testing work (including developing robust testing/CI infrastructure) as
@@ -304,7 +303,7 @@ blocked on it:
 * [recording requested and installed extras](https://github.com/pypa/packaging-problems/issues/215)
 * [option to show what versions of packages are currently available](https://github.com/pypa/pip/issues/53)
 * [listing packages' dependencies and dependents on PyPI](https://github.com/pypa/packaging-problems/issues/54)
-* [minimizing duplication of work between pip and pipenv](https://mail.python.org/archives/list/distutils-sig\@python.org/thread/2QECNWSHNEW7UBB24M2K5BISYJY7GMZF/\#2QECNWSHNEW7UBB24M2K5BISYJY7GMZF)
+* [minimizing duplication of work between pip and pipenv](https://mail.python.org/archives/list/distutils-sig@python.org/thread/2QECNWSHNEW7UBB24M2K5BISYJY7GMZF/#2QECNWSHNEW7UBB24M2K5BISYJY7GMZF)
 * [better pipenv functionality](https://github.com/pypa/pipenv/issues?q=is%3Aopen+is%3Aissue+label%3A%22Category%3A+Dependency+Resolution%22)
 * [package namespace support](https://discuss.python.org/t/namespace-support-in-pypi/1609/35)
 * [moving more code out of Python's standard library so we can release improvements faster](https://discuss.python.org/t/if-python-started-moving-more-code-out-of-the-stdlib-and-into-pypi-packages-what-technical-mechanisms-could-packaging-use-to-ease-that-transition/1738/24)
@@ -315,22 +314,27 @@ and it would fix so many dependency issues for our users:
 * [cherrypy/six/cheroot installation conflict](https://github.com/pradyunsg/zazo/issues/2)
 * [Spyder downgrade requirement](https://github.com/pypa/pip/issues/5043)
 * [boto3/bravado dependency failure](https://github.com/pradyunsg/zazo/issues/4)
-* [extras installation failure](https://github.com/pypa/pip/issues/5313\|Ansible/PyOpenSSL/cryptography failure\]\] \[\[https://github.com/pypa/pip/issues/4957)
+* [Ansible/PyOpenSSL/cryptography failure](https://github.com/pypa/pip/issues/5313)
+* [extras installation failure](https://github.com/pypa/pip/issues/4957)
 * [extras upgrade failure](https://github.com/pypa/pip/issues/4391)
 * [breaking installed packages](https://github.com/pypa/pip/issues/6494)
-* [hatch, another packaging tool](https://github.com/pradyunsg/zazo/issues/14\|elasticsearch/requests failure\]\] \[\[https://github.com/ofek/hatch/issues/47)
+* [elasticsearch/requests failure](https://github.com/pradyunsg/zazo/issues/14)
+* [hatch, another packaging tool](https://github.com/ofek/hatch/issues/47)
 
 And in our larger ecology, this causes installation problems for:
 
-* [the Servo browser engine](https://github.com/conda/conda/issues/8657\|conda's compatibility with pip\]\] \[\[https://github.com/servo/servo/issues/10611)
+* [conda's compatibility with pip](https://github.com/conda/conda/issues/8657)
+* [the Servo browser engine]([https://github.com/servo/servo/issues/10611)
 * [numpy and scipy](https://github.com/pypa/pip/issues/4582)
-* [a Cap'n Proto implementation](https://github.com/juju/python-libjuju/issues/45\|Canonical's DevOps tool Juju\]\] \[\[https://github.com/antocuni/capnpy/issues/16)
-* [the Mozilla website & icalendar](https://github.com/DataBiosphere/toil/issues/2230\|toil, awscli, and boto3\]\] \[\[https://github.com/mozilla/bedrock/issues/5967)
+* [Canonical's DevOps tool Juju](https://github.com/juju/python-libjuju/issues/45)
+* [a Cap'n Proto implementation](https://github.com/antocuni/capnpy/issues/16)
+* [toil, awscli, and boto3](https://github.com/DataBiosphere/toil/issues/2230)
+* [the Mozilla website & icalendar](https://github.com/mozilla/bedrock/issues/5967)
 * [certbot, in the past and possibly the future](https://github.com/certbot/certbot/issues/5195)
 * [TurboGears](https://github.com/TurboGears/tg2devtools/issues/13)
 * [a JIRA API client library](https://github.com/pycontribs/jira/pull/744)
 * [a WebSocket protocol test suite](https://github.com/crossbario/autobahn-testsuite/issues/55)
-* [Robot Operating System tooling](https://github.com/gerkey/ros1\_external\_use/issues/7)
+* [Robot Operating System tooling](https://github.com/gerkey/ros1_external_use/issues/7)
 
 ### Improve pip user experience
 
