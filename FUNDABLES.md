@@ -12,6 +12,8 @@ Please contact the Packaging WG to ask us to estimate how much one of
 these improvements would cost; we'll get back to you within a few
 business days.
 
+This is roughly prioritized by urgency and impact, but is not a roadmap.
+
 ## Foundational tool improvements
 
 ### Better specifications, toolchain, and services for building distributions
@@ -55,16 +57,16 @@ management, and community outreach.
 
 We need funding to ensure core packaging tools work well with each other;
 currently they aren't seamlessly interoperable. See [the integration-test
-project](https://github.com/pypa/integration-test) This will help us get
+project](https://github.com/pypa/integration-test). This will help us get
 faster at testing and rolling out bugfixes and features for **all** [Python
 packaging and distribution tools](https://packaging.python.org/key_projects):
-well-known projects like pip, virtualenv, and wheel, but also all the
+well-known projects like `pip`, `virtualenv`, and `wheel`, but also all the
 downstream projects that depend on them.
 
 ### Revamp PyPI API
 
-The Python Package Index, a key platform for Python developers, has [a minimal
-API](https://warehouse.readthedocs.io/api-reference/) that does not implement
+The [Python Package Index](https://pypi.org/), a key platform for Python developers,
+has [a minimal API](https://warehouse.readthedocs.io/api-reference/) that does not implement
 [many features that users have
 requested](https://github.com/pypa/warehouse/labels/APIs%2Ffeeds). The lack of
 a full-featured API in Warehouse (the PyPI codebase) blocks many improvements,
@@ -74,7 +76,7 @@ including:
     calls](https://github.com/pypa/warehouse/issues/474) and [JSON
     standardization](https://github.com/pypa/pip/issues/7406#issuecomment-583891169)
     that would enable better downloads, installations, dependency resolution
-    features, and troubleshooting for pip and other clients
+    features, and troubleshooting for `pip` and other clients
 -   [Asynchronous
     uploads](https://github.com/pypa/warehouse/issues/7730) and thus
     [some validation checks](https://github.com/pypa/warehouse/issues/5420) and
@@ -92,22 +94,23 @@ research, and publicity and coordination work within Python's community.
 
 ### Make setuptools the reference implementation of the distutils API
 
-There is a part of the Python standard library called `distutils`, and some
+There is a part of the Python standard library 
+[called](https://docs.python.org/3/library/distutils.html) `distutils`, and some
 users directly use it.  [We want users to instead switch to the supported
 toolchain](https://github.com/pypa/packaging-problems/issues/127), which uses
-`setuptools`, and move all the functionality from `distutils` into
+`setuptools`, and we want to move all the functionality from `distutils` into
 `setuptools`. This requires backend development work, technical writing,
 project management, and publicity work within Python's community.
 
 ### Provide more standardized editable installations
 
 Developers of Python projects want to be able to use "editable installations"
--- changing the code of on applications while simultaneously running those
+-- changing the code of applications while simultaneously running those
 applications. Right now, the support for that kind of usage is rough and not
 standardized across different tools.  [Packaging tools maintainers have rough
 plans for how to standardize the feature and support for
 it](https://discuss.python.org/t/specification-of-editable-installation/1564)
-using distutils and setuptools. We would like funding for developing a proof of
+using `distutils` and `setuptools`. We would like funding for developing a proof of
 concept and coordinating subsequent standards changes, tool improvements, and
 documentation. This requires backend development work, technical writing, and
 coordination and publicity work within Python's community.
@@ -116,12 +119,12 @@ coordination and publicity work within Python's community.
 
 `setuptools` [does not yet
 allow](https://github.com/pypa/setuptools/issues/1688) project creators to use
-the new `pyproject.toml` standard configuration file to configure `setuptools`
-behavior. This distracts and confuses package creators, and prevents platforms
+[the new `pyproject.toml` standard configuration file](https://snarky.ca/what-the-heck-is-pyproject-toml/) 
+to configure `setuptools` behavior. This distracts and confuses package creators, and prevents platforms
 and tools from depending on the presence of standard `pyproject.toml` metadata
 in packages. We'd like to implement `pyproject.toml` configuration support in
 `setuptools`. This requires backend development work, technical writing, and
-coordination and publicity work within Python's community.
+coordination and publicity work among Python users.
 
 ### Audit and update package metadata
 
@@ -138,7 +141,7 @@ database access; funding would break this bottleneck.
 
 ### Improve user experience of packaging
 
-User experience research and UX and development implementation work would [make
+User experience research, and UX and development implementation work, would [make
 it easier for packagers to create configuration
 files](https://github.com/pypa/packaging-problems/issues/1). We aim to use the
 UX research work from [improvements in pip's user
@@ -227,7 +230,7 @@ project management support to develop and deploy this.
 
 Python packagers who need help currently create
 [Sourceforge](https://sourceforge.net/p/pypi/support-requests/)
-and [GitHub](https://github.com/pypa/warehouse/issues/) tickets,
+and [GitHub](https://github.com/pypa/pypi-support/issues) tickets,
 email mailing lists, tweet at maintainers, and so on. A
 [unified user support ticket system](https://github.com/pypa/warehouse/issues/3231#issuecomment-405561741), integrated into Warehouse, would:
 
@@ -256,7 +259,7 @@ as deprecated or a project as unsupported. This means we need a generic
 system to add, edit, and remove administrative attributes ("flags" or
 "statuses") to individual projects and releases. We need support to do
 the architectural design to implement this. (See
-[notes from this meeting](PackagingWG/2019-03-22-Warehouse).)
+[notes from this meeting](https://wiki.python.org/psf/PackagingWG/2019-03-22-Warehouse).)
 
 ### Security notifications for vulnerable packages
 
