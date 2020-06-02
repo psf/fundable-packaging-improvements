@@ -324,7 +324,7 @@ and it would fix so many dependency issues for our users:
 And in our larger ecology, this causes installation problems for:
 
 * [conda's compatibility with pip](https://github.com/conda/conda/issues/8657)
-* [the Servo browser engine]([https://github.com/servo/servo/issues/10611)
+* [the Servo browser engine](https://github.com/servo/servo/issues/10611)
 * [numpy and scipy](https://github.com/pypa/pip/issues/4582)
 * [Canonical's DevOps tool Juju](https://github.com/juju/python-libjuju/issues/45)
 * [a Cap'n Proto implementation](https://github.com/antocuni/capnpy/issues/16)
