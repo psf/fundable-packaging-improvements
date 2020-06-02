@@ -77,7 +77,8 @@ including:
     features, and troubleshooting for pip and other clients
 -   [Asynchronous
     uploads](https://github.com/pypa/warehouse/issues/7730) and thus
-    [some validation checks](https://github.com/pypa/warehouse/issues/5420
+    [some validation checks](https://github.com/pypa/warehouse/issues/5420) and
+    [license compliance checking](https://discuss.python.org/t/improving-license-clarity-with-better-package-metadata/2154/71)
 -   [RSS feeds](https://github.com/pypa/warehouse/pull/7013) that
     other platforms could reuse to get PyPI updates in user tooling
 -   [Release security features (via token
@@ -276,7 +277,7 @@ Some TODOs that were on this page have now received funding!
 ### Finish dependency resolver for pip
 
 __[This is now funded](https://pyfound.blogspot.com/2019/11/seeking-developers-for-paid-contract.html) and
-[we seek developers to work on this project (apply by 22 November 2019](https://github.com/python/request-for/blob/master/2020-pip/RFP.md).)__
+[we hired developers to work on this project](https://github.com/python/request-for/blob/master/2020-pip/RFP.md).)__
 
 We're partway through a next-generation rewrite of the dependency
 resolver within pip, Python's package download and installation tool.
