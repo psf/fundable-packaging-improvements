@@ -14,7 +14,7 @@ The list is roughly prioritized by urgency and impact, but is not a roadmap. Ple
 
 ## Suggest a task
 
-Use THIS TEMPLATE TKTK to suggest a task for the list. We welcome your pull requests.
+To suggest a task for the list, make a pull request against this repo. We welcome your suggestion.
 
 ## Maintainers and contact
 
