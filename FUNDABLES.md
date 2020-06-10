@@ -65,32 +65,20 @@ downstream projects that depend on them.
 
 ### Revamp PyPI API
 
-The [Python Package Index](https://pypi.org/), a key platform for Python developers,
-has [a minimal API](https://warehouse.readthedocs.io/api-reference/) that does not implement
-[many features that users have
-requested](https://github.com/pypa/warehouse/labels/APIs%2Ffeeds). The lack of
-a full-featured API in Warehouse (the PyPI codebase) blocks many improvements,
-including:
+The [Python Package Index](https://pypi.org/), a key platform for Python developers, has a browser interface, but most people use PyPI by hitting its [API endpoints](https://warehouse.readthedocs.io/api-reference/#available-apis) with client applications such as `pip`. PyPI has [a minimal download API](https://warehouse.readthedocs.io/api-reference/) that does not implement [many features that users have requested](https://github.com/pypa/warehouse/labels/APIs%2Ffeeds). The lack of a full-featured download API in Warehouse (the PyPI codebase) blocks many improvements, including:
 
 -   [Light-bandwidth metadata-only API
     calls](https://github.com/pypa/warehouse/issues/474) and [JSON
     standardization](https://github.com/pypa/pip/issues/7406#issuecomment-583891169)
     that would enable better downloads, installations, dependency resolution
     features, and troubleshooting for `pip` and other clients
--   [Asynchronous
-    uploads](https://github.com/pypa/warehouse/issues/7730) and thus
-    [some validation checks](https://github.com/pypa/warehouse/issues/5420) and
-    [license compliance checking](https://discuss.python.org/t/improving-license-clarity-with-better-package-metadata/2154/71)
 -   [RSS feeds](https://github.com/pypa/warehouse/pull/7013) that
     other platforms could reuse to get PyPI updates in user tooling
--   [Release security features (via token
-    generation)](https://github.com/pypa/warehouse/issues/6378)
 -   [Security notification feeds](https://github.com/pypa/warehouse/issues/798)
 -   [Caching for the bandersnatch mirroring
     client](https://github.com/pypa/warehouse/issues/284)
 
-This requires backend development work, technical writing, user experience
-research, and publicity and coordination work within Python's community.
+We'd like to [architect and implement a new Warehouse download API](https://github.com/pypa/warehouse/issues/284) to support these features, and deprecate and decommission the old endpoints. This requires backend development work, technical writing, user experience research, and publicity and coordination work within Python's community.
 
 ### Make setuptools the reference implementation of the distutils API
 
