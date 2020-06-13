@@ -44,6 +44,11 @@ We'd like help to:
     PEP](https://www.python.org/dev/peps/pep-0600/) and get it approved and
     implemented to reduce the churn of hardcoded, brittle manylinux standards
     and react better to ongoing platform change
+-   [Fully implement & maintain conda-press](https://regro.github.io/conda-press-docs/) 
+    Conda-press is a tool that takes conda packages and turns them into wheels, without 
+    recompiling. This makes it very fast to create a wheel out of an existing package.
+    It usually works. However, there have been a variety of bug and maintainence issues
+    that require more development (and perhaps a refactor) to address.
 -   [Create a generic wheel-building
     service](https://github.com/pypa/packaging-problems/issues/25)  to make
     releases faster and more robust
