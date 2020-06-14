@@ -237,6 +237,10 @@ security checks, DevOps/infrastructure/platform services (including
 API/email integration), user experience work, technical writing for end
 users, project management, and community outreach.
 
+### Architecture to support alternative authentication methods in packaging tools
+
+Python packaging tools that interacts with package indexes, such as [pip](https://github.com/pypa/pip/issues/4475) and [twine](https://github.com/pypa/twine/issues/362), currently only have simple authentication support to secure private sources, such as [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Open source tool maintainers acknowledge that stronger authentication methods, such as single sign-on, are sometimes required due to organisation policies. We believe it’s beneficial to develop a pluggable Python library that can be depended by the packaging tools to provide additional authentication methods, but lack both the use case and domain knowledge in the area. We are looking for funding and expertise support from organisations.
+
 ## Security improvements and prerequisites
 
 ### System to label projects on PyPI with administrative statuses/attributes
