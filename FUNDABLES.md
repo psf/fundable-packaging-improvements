@@ -8,9 +8,10 @@ This page lists specific things that
     Group](https://wiki.python.org/psf/PackagingWG) got funding to achieve them
     (through [donations](http://donate.pypi.org/) or grants/directed gifts)
 
-Please contact the Packaging WG to ask us to estimate how much one of
-these improvements would cost; we'll get back to you within a few
-business days.
+Please contact the Packaging WG by emailing
+[`ewa@python.org`](mailto:ewa@python.org) to ask us to estimate how much one of
+these improvements would cost; we'll get back to you within a few business
+days.
 
 This is roughly prioritized by urgency and impact, but is not a roadmap.
 
