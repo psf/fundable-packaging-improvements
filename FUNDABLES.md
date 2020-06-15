@@ -8,9 +8,10 @@ This page lists specific things that
     Group](https://wiki.python.org/psf/PackagingWG) got funding to achieve them
     (through [donations](http://donate.pypi.org/) or grants/directed gifts)
 
-Please contact the Packaging WG to ask us to estimate how much one of
-these improvements would cost; we'll get back to you within a few
-business days.
+Please contact the Packaging WG by emailing
+[`ewa@python.org`](mailto:ewa@python.org) to ask us to estimate how much one of
+these improvements would cost; we'll get back to you within a few business
+days.
 
 This is roughly prioritized by urgency and impact, but is not a roadmap.
 
@@ -82,7 +83,7 @@ We'd like to [architect and implement a new Warehouse download API](https://gith
 
 ### Make setuptools the reference implementation of the distutils API
 
-There is a part of the Python standard library 
+There is a part of the Python standard library
 [called](https://docs.python.org/3/library/distutils.html) `distutils`, and some
 users directly use it.  [We want users to instead switch to the supported
 toolchain](https://github.com/pypa/packaging-problems/issues/127), which uses
@@ -107,7 +108,7 @@ coordination and publicity work within Python's community.
 
 `setuptools` [does not yet
 allow](https://github.com/pypa/setuptools/issues/1688) project creators to use
-[the new `pyproject.toml` standard configuration file](https://snarky.ca/what-the-heck-is-pyproject-toml/) 
+[the new `pyproject.toml` standard configuration file](https://snarky.ca/what-the-heck-is-pyproject-toml/)
 to configure `setuptools` behavior. This distracts and confuses package creators, and prevents platforms
 and tools from depending on the presence of standard `pyproject.toml` metadata
 in packages. We'd like to implement `pyproject.toml` configuration support in
