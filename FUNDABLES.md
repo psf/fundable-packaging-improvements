@@ -269,6 +269,8 @@ PSF did an [RfP](https://github.com/python/request-for/blob/master/2019-Q4-PyPI/
 
 Additionally, we tried to set up a partnership with [VirusTotal](https://www.virustotal.com/) during the check development to scan every uploaded package. Sadly, we were unable to finalize the details in time to begin implementation. Integration with a 3rd-party virus scanner is low-hanging fruit that could move the needle on PyPI package security.
 
+Funding would be used for backend development and security engineering. Ideally, AV integrations would be donated by the vendors.
+
 # Items that have now been funded
 
 Some TODOs that were on this page have now received funding!
