@@ -260,6 +260,15 @@ need funding for user experience work, development, testing,
 infrastructure, potentially platform services (e.g., SMS), and community
 outreach.
 
+### Productionize Malware Detection
+PSF did an [RfP](https://github.com/python/request-for/blob/master/2019-Q4-PyPI/RFP.md) for some security work on [Warehouse](https://github.com/pypa/warehouse) in late 2019, but the goals for [Milestone 2](https://github.com/python/request-for/blob/master/2019-Q4-PyPI/RFP.md#milestone-2---systems-for-automated-detection-of-malicious-uploads) were more ambitious than funding allowed for. The malware detection system is currently in limbo: an interesting prototype with limited practical impact because of the astounding number of false-positives. Here is a sampling of some of the open issues:
+- [Make Malware Verdicts Auditable](https://github.com/pypa/warehouse/issues/7421) - verdicts are removed once the associated project/package is removed, which makes it impossible to evaluate the efficacy of this system
+- [Detect packages being published with typo'ish names](https://github.com/pypa/warehouse/issues/4998) - No progress was made on a typosquatting check.
+- [Implement a more robust malware detector](https://github.com/pypa/warehouse/issues/7748) - One current check relies on simple pattern matching with YARA. A better approach requires parsing the package code into an AST.
+- [YARA rules for setup.py not ignoring comments](https://github.com/pypa/warehouse/issues/7475) - Related to the above issue.
+
+Additionally, we tried to set up a partnership with [VirusTotal](https://www.virustotal.com/) during the check development to scan every uploaded package. Sadly, we were unable to finalize the details in time to begin implementation. Integration with a 3rd-party virus scanner is low-hanging fruit that could move the needle on PyPI package security.
+
 # Items that have now been funded
 
 Some TODOs that were on this page have now received funding!
