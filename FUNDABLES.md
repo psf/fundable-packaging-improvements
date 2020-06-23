@@ -9,7 +9,7 @@ This page lists specific things that
     (through [donations](http://donate.pypi.org/) or grants/directed gifts)
 
 Please contact the Packaging WG by emailing
-[`ewa@python.org`](mailto:ewa@python.org) to ask us to estimate how much one of
+[`packaging-wg@python.org`](mailto:packaging-wg@python.org) to ask us to estimate how much one of
 these improvements would cost; we'll get back to you within a few business
 days.
 
