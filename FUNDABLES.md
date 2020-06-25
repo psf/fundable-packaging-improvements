@@ -239,13 +239,13 @@ users, project management, and community outreach.
 
 ### Architecture to support alternative authentication methods in packaging tools
 
-Python packaging tools that interacts with package indexes, such as pip ([pypa/pip#4475](https://github.com/pypa/pip/issues/4475)) and twine ([pypa/twine#362](https://github.com/pypa/twine/issues/362)), currently only have simple authentication support to secure private sources, such as [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Open source tool maintainers acknowledge that stronger authentication methods, such as single sign-on, are sometimes required due to organisation policies. We believe it’s beneficial to develop a pluggable Python library that can be depended by the packaging tools to provide additional authentication methods, but lack both the use case and domain knowledge in the area. We are looking for funding and expertise support from organisations.
+Python packaging tools that interact with package indexes, such as pip ([pypa/pip#4475](https://github.com/pypa/pip/issues/4475)) and twine ([pypa/twine#362](https://github.com/pypa/twine/issues/362)), currently only have simple authentication support to secure private sources, such as [basic access authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Open source tool maintainers acknowledge that when using third-party indices, stronger authentication methods, such as single sign-on, are sometimes required due to organisation policies. We believe it’s beneficial to develop a pluggable Python library that can be depended by the packaging tools to provide additional authentication methods, but lack both the use case and domain knowledge in the area. We are looking for funding and expertise support from organisations.
 
-We are looking into developing a shared interface and implementation for various alternative authentication method support can be developed for both tools (and maybe more), so organisations can choose to install them to be able to use e.g. Kerberos to secure their private package indexes. The work involved would include the following topics:
+We are interested in developing a shared interface and implementation for various alternative authentication methods. Support can be developed for both tools (and maybe more), so organisations can choose to install them to be able to use e.g. Kerberos to secure their private package indexes. The work involved would include the following topics:
 
-* A survey of various auth methods, and how they can be implemented as a pluggable library.
+* A survey of various authentication methods, and how they can be implemented as a pluggable library.
 * Develop an interface that tools (e.g. pip) can implement to detect authentication method support, and call into the library that provides it.
-* Develop and maintain libraries that implement the various auth methods for people to install when the support is needed.
+* Develop and maintain libraries that implement the various auth methods for users to install when support is needed.
 
 
 ## Security improvements and prerequisites
