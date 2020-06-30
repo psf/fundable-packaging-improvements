@@ -54,6 +54,45 @@ frontend development, testing, DevOps/infrastructure/platform services,
 user experience work, technical writing for end users, project
 management, and community outreach.
 
+#### Port auditwheel to Windows and Mac
+
+The packaging tool [auditwheel](https://github.com/pypa/auditwheel)
+"is a command line tool to facilitate the creation of Python wheel
+packages for Linux (containing pre-compiled binary extensions) that
+are compatible with a wide variety of Linux distributions" and key
+standards. It can inspect a wheel, checking whether it is
+standards-compliant. It can also repair a wheel. If a wheel depends on
+libraries that are not on the system, it can rewrite that wheel and inject
+libraries needed, parsing and rewriting ELF data. It can also repair the
+relevant `manylinux` tag(s) on a wheel.
+
+However, no such utility exists on Windows, and so package maintainers
+on Windows face trouble creating wheels and debugging their
+packages. And [the similar utility for Mac
+OS](https://pypi.org/project/delocate/) does not share auditwheel's
+code and user interface.
+
+Therefore, [developers would like to add Windows and Mac support to
+auditwheel.](https://discuss.python.org/t/need-auditwheel-like-utility-for-other-platforms/2028/4)
+Porting auditwheel to Windows would make it *much* easier to make
+Windows wheels, and porting it to macOS would reduce duplication on
+the packaging maintainers' side, and reduce the proliferation of
+quirky tools that individual package maintainers need to learn about.
+
+A simpler and more consistent cross-platform workflow will make it
+easier for package maintainers to use generic off-the-shelf
+automation. More maintainers will be able to leverage available
+automation (GitHub Actions, Travis CI, Azure pipelines, and
+potentially a future PyPI wheel-building service) to speed up releases
+and reduce grunt work. Also, this will especially be useful for
+scientific programmers, since they often create Python applications or
+libraries that include binaries written in other languages, and wheel
+distributions of those packages are prone to complication.
+
+We need funding for backend development, hardware, testing, continuous
+integration platform services, technical writing for end users,
+project management, and community outreach.
+
 ### Robust interoperability testing
 
 We need funding to ensure core packaging tools work well with each other;
