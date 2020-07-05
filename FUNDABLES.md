@@ -270,7 +270,7 @@ Since anyone can upload a package to PyPI, malicious users might upload malware,
 
 We also want to set up a partnership with [VirusTotal](https://www.virustotal.com/) or a similar third-party virus checking service during the check development to scan every uploaded package. Integration with a third-party virus scanner is low-hanging fruit that could move the needle on PyPI package security.
 
-Funding would be used for backend development and security engineering. Ideally, AV integrations would be donated by the vendors.
+Funding would be used for backend development, security engineering, project management, system administration, and publicity to stakeholders. Ideally, AV integrations would be donated by the vendors.
 
 # Items that have now been funded
 
