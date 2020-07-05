@@ -266,6 +266,7 @@ Since anyone can upload a package to PyPI, malicious users might upload malware,
 - [Detect packages being published with typo'ish names](https://github.com/pypa/warehouse/issues/4998) - Add a typosquatting check.
 - [Implement a more robust malware detector](https://github.com/pypa/warehouse/issues/7748) - One current check relies on simple pattern matching with YARA. A better approach requires parsing the package code into an AST.
 - [YARA rules for setup.py not ignoring comments](https://github.com/pypa/warehouse/issues/7475) - Related to the above issue.
+- Release a canonical dataset for developers to write their checks against, and iterate on to improve detection accuracy.
 
 We also want to set up a partnership with [VirusTotal](https://www.virustotal.com/) or a similar third-party virus checking service during the check development to scan every uploaded package. Integration with a third-party virus scanner is low-hanging fruit that could move the needle on PyPI package security.
 
