@@ -154,6 +154,21 @@ in packages. We'd like to implement `pyproject.toml` configuration support in
 `setuptools`. This requires backend development work, technical writing, and
 coordination and publicity work among Python users.
 
+### De-duplicate and reorganize setuptools documentation
+
+The [documentation for setuptools](https://setuptools.readthedocs.io/)
+has grown messily over time and is difficult to browse and
+navigate. Also, the [legacy documentation for
+distutils](https://docs.python.org/3/distutils/index.html) and the
+current setuptools docs heavily overlap in content. These references
+thus trip up even experienced developers who want to understand these
+fundamental utilities.
+
+We need funding for several weeks of technical writer work and developer review to:
+
+* de-duplicate the distutils and setuptools documentation, making the latter independent of the former
+* re-organize the setuptools documentation
+
 ### Audit and update package metadata
 
 If we [audit and update PyPI metadata for existing projects based on
