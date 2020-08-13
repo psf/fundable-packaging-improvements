@@ -330,8 +330,8 @@ Some TODOs that were on this page have now received funding!
 
 ### Finish dependency resolver for pip
 
-__[This is now funded](https://pyfound.blogspot.com/2019/11/seeking-developers-for-paid-contract.html) and
-[we hired developers to work on this project](https://github.com/python/request-for/blob/master/2020-pip/RFP.md).)__
+__([This is now funded](https://pyfound.blogspot.com/2019/11/seeking-developers-for-paid-contract.html) and
+[we hired people to work on this project](https://github.com/python/request-for/blob/master/2020-pip/RFP.md). The [new resolver is in beta](https://blog.python.org/2020/07/upgrade-pip-20-2-changes-20-3.html).)__
 
 We're partway through a next-generation rewrite of the dependency
 resolver within pip, Python's package download and installation tool.
