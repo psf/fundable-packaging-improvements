@@ -299,6 +299,20 @@ We are interested in developing a shared interface and implementation for variou
 * Develop an interface that tools (e.g. pip) can implement to detect authentication method support, and call into the library that provides it.
 * Develop and maintain libraries that implement the various auth methods for users to install when support is needed.
 
+### Release wheel 1.0 and provide a public API
+
+The wheel project, the official binary distribution format for Python,
+is [approaching version
+1.0](https://mail.python.org/archives/list/distutils-sig@python.org/thread/X2NNYA25EBAQYTPKRSJASPIBY6YT5VKB/). The
+[milestone](https://github.com/pypa/wheel/milestone/1) includes
+[Provide a public API: "Since there is clearly a need for wheel to
+function as a library as well, a public API should be defined and
+documented."](https://github.com/pypa/wheel/issues/262) The stability
+implied by the 1.x version number, and the public API, will improve
+other tools' ability to call and reuse `wheel`, thus reducing
+duplication and improving other toolmakers' ability to move faster and
+maintain their codebases more easily. We would like support for design
+and implementation, community coordination, and technical writing.
 
 ## Security improvements and prerequisites
 
