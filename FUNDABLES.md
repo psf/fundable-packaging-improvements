@@ -37,14 +37,6 @@ fiddly, brittle, and time-consuming.
 
 We'd like help to:
 
--   [Implement the manylinux2014
-    standard](https://github.com/pypa/manylinux/issues/338) throughout the
-    toolchain, to help users move off already end-of-life'd Linux distributions
-    and get on a better foundation for security patches
--   [Finish the "perennial" manylinux
-    PEP](https://www.python.org/dev/peps/pep-0600/) and get it approved and
-    implemented to reduce the churn of hardcoded, brittle manylinux standards
-    and react better to ongoing platform change
 -   [Fully implement & maintain conda-press](https://regro.github.io/conda-press-docs/) 
     Conda-press is a tool that takes conda packages and turns them into wheels, without 
     recompiling. This makes it very fast to create a wheel out of an existing package.
