@@ -37,7 +37,7 @@ fiddly, brittle, and time-consuming.
 
 We'd like help to:
 
--   [Fully implement & maintain conda-press](https://regro.github.io/conda-press-docs/) 
+-   [Fully implement & maintain conda-press](https://conda-incubator.github.io/conda-press-docs/) 
     Conda-press is a tool that takes conda packages and turns them into wheels, without 
     recompiling. This makes it very fast to create a wheel out of an existing package.
     It usually works. However, there have been a variety of bug and maintainence issues
