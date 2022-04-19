@@ -321,10 +321,10 @@ and implementation, community coordination, and technical writing.
 To mitigate account takeover attacks, where attackers upload malicious code in existing popular packages, we need to continue improving our support for MFA and use of API tokens instead of password-based auth.  This work would involve research, development, and technical writing to finalise and implement existing proposals including:
 
 - [Require API Tokens for upload if MFA is enabled](https://github.com/pypa/warehouse/issues/7265) (upload currently bypasses MFA)
-- [Add ability to require MFA for a given project](https://github.com/pypa/warehouse/issues/5792)
+- [Improve 2FA Account Recovery request fulfillment process](https://github.com/pypa/pypi-support/issues/796)
 - [other issues tagged `tokens`](https://github.com/pypa/warehouse/labels/tokens)
 
-Once these technical prerequisites are satisfied, we would be able to [revisit discussion of MFA *policy*](https://discuss.python.org/t/require-mfa-on-pypi/12077) - including encouraging MFA requirements for popular packages, or even mandating it for all users as some other package registries are considering.  This subsequent work would involve additional development, project management, and community engagement as we determine and implement authentication policy.
+Once these technical prerequisites are satisfied, we would be able to [revisit discussion of MFA *policy*](https://discuss.python.org/t/require-mfa-on-pypi/12077) - including encouraging MFA requirements for popular packages, or even mandating it for all users as some other package registries are considering.  This subsequent work would involve additional development, project management, and community engagement as we determine and implement authentication policy, including ongoing user support to handle a much greater frequency of account recovery requests.
 
 ### System to label projects on PyPI with administrative statuses/attributes
 
