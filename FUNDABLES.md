@@ -346,6 +346,22 @@ need funding for user experience work, development, testing,
 infrastructure, potentially platform services (e.g., SMS), and community
 outreach.
 
+### Check for insecure maintainer accounts
+
+[Recent research on weaknesses in the `npm` supply chain](https://arxiv.org/abs/2112.10165)
+identified 2,818 maintainer email addresses at expired domains, affecting 8,494 packages.
+Such weaknesses can be mitigated by multi-factor authentication, but generally make
+targeted account hijacking trivially easy.  PyPI could regularly check that custom domains
+linked to account email addresses remain registered.
+
+Similarly, PyPI could mitigate the risks of password reuse by checking for maintainer email
+addresses in security breaches from other sites and checking that new passwords
+[have not already been exposed](https://haveibeenpwned.com/Passwords).
+
+Funding would be used for backend development, security engineering, project management,
+system administration, outreach to package maintainers, and ongoing operational costs.
+
+
 ### Productionize Malware Detection
 Since anyone can upload a package to PyPI, malicious users might upload malware, which would then harm users. To mitigate this risk, PSF [previously obtained funding](https://github.com/python/request-for/blob/master/2019-Q4-PyPI/RFP.md) to add some malware detection in [Warehouse](https://github.com/pypa/warehouse) in late 2019, but the goals for [the relevant milestone](https://github.com/python/request-for/blob/master/2019-Q4-PyPI/RFP.md#milestone-2---systems-for-automated-detection-of-malicious-uploads) were more ambitious than funding allowed for. The malware detection system is currently in limbo: an interesting prototype with limited practical impact because of the astounding number of false-positives. To protect users from malware, we still need to:
 - [Make Malware Verdicts Auditable](https://github.com/pypa/warehouse/issues/7421) - Right now, verdicts are removed once the associated project/package is removed. We need to change the backend to retain past verdicts so we can evaluate and improve the efficacy of this system.
