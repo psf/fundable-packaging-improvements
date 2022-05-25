@@ -37,8 +37,8 @@ fiddly, brittle, and time-consuming.
 
 We'd like help to:
 
--   [Fully implement & maintain conda-press](https://conda-incubator.github.io/conda-press-docs/) 
-    Conda-press is a tool that takes conda packages and turns them into wheels, without 
+-   [Fully implement & maintain conda-press](https://conda-incubator.github.io/conda-press-docs/)
+    Conda-press is a tool that takes conda packages and turns them into wheels, without
     recompiling. This makes it very fast to create a wheel out of an existing package.
     It usually works. However, there have been a variety of bug and maintainence issues
     that require more development (and perhaps a refactor) to address.
@@ -345,6 +345,23 @@ install a PyPI package that's been found to be broken or malware. We
 need funding for user experience work, development, testing,
 infrastructure, potentially platform services (e.g., SMS), and community
 outreach.
+
+### Check for insecure maintainer email addresses
+
+[Recent research on weaknesses in the `npm` supply chain](https://arxiv.org/abs/2112.10165)
+identified 2,818 maintainer email addresses at expired domains, affecting 8,494 packages.
+Such weaknesses can be mitigated by multi-factor authentication, but generally make
+targeted account hijacking trivially easy.
+
+Because registration expiry dates are public via whois records, PyPI could warn maintainers
+with email addresses at soon-to-expire domains.  As a further enhancement, PyPI could block
+password resets via any email address at a domain which has expired and been re-registered
+*after* the 30 day renewal grace period.  This gives defenders a natural time-based advantage
+over attackers.
+
+Funding would be used for backend development, security engineering, project management,
+system administration, outreach to package maintainers, and ongoing operational costs.
+
 
 ### Productionize Malware Detection
 Since anyone can upload a package to PyPI, malicious users might upload malware, which would then harm users. To mitigate this risk, PSF [previously obtained funding](https://github.com/python/request-for/blob/master/2019-Q4-PyPI/RFP.md) to add some malware detection in [Warehouse](https://github.com/pypa/warehouse) in late 2019, but the goals for [the relevant milestone](https://github.com/python/request-for/blob/master/2019-Q4-PyPI/RFP.md#milestone-2---systems-for-automated-detection-of-malicious-uploads) were more ambitious than funding allowed for. The malware detection system is currently in limbo: an interesting prototype with limited practical impact because of the astounding number of false-positives. To protect users from malware, we still need to:
