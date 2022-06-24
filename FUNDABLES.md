@@ -166,6 +166,29 @@ We need funding for several weeks of technical writer work and developer review 
 * de-duplicate the distutils and setuptools documentation, making the latter independent of the former
 * re-organize the setuptools documentation
 
+### Add support for reproducible builds to setuptools
+
+[Reproducible builds](https://en.wikipedia.org/wiki/Reproducible_builds) allow
+developers to independently verify that a distributed software package was not
+tampered with. Since a considerable number of the Python packages use
+`setuptools`, adding support for reproducible builds to this build backend
+can help to improve security in Python ecosystem as a whole.
+Some preliminary works that can help structuring this activity are available (see
+[pypa/setuptools#2133](https://github.com/pypa/setuptools/issues/2133),
+[pypa/setuptools#1512](https://github.com/pypa/setuptools/pull/1512) and
+[pypa/wheel#362](https://github.com/pypa/wheel/issues/362)), however the
+effort was never concluded. Funding would be used finalize the development of
+this feature.
+
+Import tasks are:
+- Support `SOURCE_DATA_EPOCH` environment variable for both sdists and wheels.
+- Make both sdist and wheels independent of umask.
+- Ensure that C/C++-extensions compiled with setuptools are reproducible.
+- Document the process of verifying a sdist or wheel.
+
+This project might require coordination with other tools in the ecosystem
+(e.g. `wheel`).
+
 ### Audit and update package metadata
 
 If we [audit and update PyPI metadata for existing projects based on
