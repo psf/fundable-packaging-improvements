@@ -213,8 +213,12 @@ some progress toward standardizing an interoperable lockfile
 format](https://github.com/uranusjr/lock-file), but we need to finish [that
 design standardization and consensus-gathering
 work](https://discuss.python.org/t/structured-exchangeable-lock-file-format-requirements-txt-2-0/876/)
-and implement it in `pip`, `pipenv`, and related tools. We'd need Python
+and implement it in `pip`, `pipenv`, and related tools. Other attempts reached the PEP
+stage [^pep-650][^pep-665], but ultimately were rejected. We'd need Python
 engineering work and project management to develop and deploy this.
+
+[^pep-650]: https://peps.python.org/pep-0650/
+[^pep-665]: https://peps.python.org/pep-0665/
 
 ### Package preview feature for PyPI
 
