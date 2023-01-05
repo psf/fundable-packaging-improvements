@@ -18,4 +18,4 @@ To suggest a task for the list, make a pull request against this repo. We welcom
 
 ## Maintainers and contact
 
-This list is maintained and updated by the [Packaging Working Group](https://wiki.python.org/psf/PackagingWG), a [volunteer work group of the Python Software Foundation](https://www.python.org/psf/committees/#packaging-work-group), approximately twice a month. Please [refer to the WG for administration and contact info](https://wiki.python.org/psf/PackagingWG#Administration_and_Contact).
+This list is maintained and updated by the [Packaging Working Group](https://wiki.python.org/psf/PackagingWG), a [volunteer work group of the Python Software Foundation](https://www.python.org/psf/workgroups/#packaging-work-group), approximately twice a month. Please [refer to the WG for administration and contact info](https://wiki.python.org/psf/PackagingWG#Administration_and_Contact).
