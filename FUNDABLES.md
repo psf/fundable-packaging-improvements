@@ -17,6 +17,37 @@ This is roughly prioritized by urgency and impact, but is not a roadmap.
 
 ## Foundational tool improvements
 
+### Implement metadata PEPs
+
+The packaging ecosystem relies heavily on access to project metadata. This data
+is currently difficult to access, because traditionally it was calculated "on
+demand" and only available by downloading the full distribution file. [PEP
+643](https://www.python.org/dev/peps/pep-0643/) specifies a mechanism that
+allows projects to expose static metadata from source distributions where
+available (critically, project name and version are required to be static), and
+[PEP 658](https://www.python.org/dev/peps/pep-0658/) allows package indexes to
+expose metadata without requiring a download of the full distribution file.
+
+These two PEPs are currently not implemented throughout the packaging ecosystem.
+In particular, Warehouse does not yet allow PEP 643 metadata to be uploaded,
+and it does not implement PEP 658 for either wheels or source distributions. And
+setuptools does not yet implement PEP 643 (while a full implementation involves
+complex backward compatibility questions, a simple implementation of static name
+and version metadata could be relatively straightforward).
+
+If these two PEPs were implemented as described above, so that they achieve a
+critical mass of being available for a significant proportion of package queries,
+tools consuming package metadata, such as pip and poetry, could successfully
+use that data to simplify and optimise package handling, and adhoc tools would
+be able to reliably access package metadata without needing to implement complex
+download and build processes.
+
+I am writing this proposal from the point of view of potential consumers of the
+relevant metadata. I have not reached out to the setuptools or warehouse projects
+to establish if they would be interested in having this work funded, but I believe
+that we need to find some way of speeding up adoption of these standards to allow
+the ecosystem to move forward.
+
 ### Better specifications, toolchain, and services for building distributions
 
 PyTorch, TensorFlow, and many other Python packages (especially
