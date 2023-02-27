@@ -171,17 +171,6 @@ concept and coordinating subsequent standards changes, tool improvements, and
 documentation. This requires backend development work, technical writing, and
 coordination and publicity work within Python's community.
 
-### Add support for pyproject.toml as a way to configure setuptools
-
-`setuptools` [does not yet
-allow](https://github.com/pypa/setuptools/issues/1688) project creators to use
-[the new `pyproject.toml` standard configuration file](https://snarky.ca/what-the-heck-is-pyproject-toml/)
-to configure `setuptools` behavior. This distracts and confuses package creators, and prevents platforms
-and tools from depending on the presence of standard `pyproject.toml` metadata
-in packages. We'd like to implement `pyproject.toml` configuration support in
-`setuptools`. This requires backend development work, technical writing, and
-coordination and publicity work among Python users.
-
 ### De-duplicate and reorganize setuptools documentation
 
 The [documentation for setuptools](https://setuptools.readthedocs.io/)
