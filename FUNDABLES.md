@@ -158,19 +158,6 @@ toolchain](https://github.com/pypa/packaging-problems/issues/127), which uses
 `setuptools`. This requires backend development work, technical writing,
 project management, and publicity work within Python's community.
 
-### Provide more standardized editable installations
-
-Developers of Python projects want to be able to use "editable installations"
--- changing the code of applications while simultaneously running those
-applications. Right now, the support for that kind of usage is rough and not
-standardized across different tools.  [Packaging tools maintainers have rough
-plans for how to standardize the feature and support for
-it](https://discuss.python.org/t/specification-of-editable-installation/1564)
-using `distutils` and `setuptools`. We would like funding for developing a proof of
-concept and coordinating subsequent standards changes, tool improvements, and
-documentation. This requires backend development work, technical writing, and
-coordination and publicity work within Python's community.
-
 ### De-duplicate and reorganize setuptools documentation
 
 The [documentation for setuptools](https://setuptools.readthedocs.io/)
